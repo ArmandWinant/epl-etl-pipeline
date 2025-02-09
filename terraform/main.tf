@@ -10,4 +10,10 @@ terraform {
 # Configure the AWS Provider
 provider "aws" {
   region = "eu-central-1"
+  shared_credentials_files = ["~/.aws/credentials"]
+  profile = "default"
+}
+
+resource "aws_s3_bucket" "test-bucket" {
+
 }
